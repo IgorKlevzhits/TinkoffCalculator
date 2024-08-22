@@ -40,6 +40,7 @@ enum CalculationHistoryItem {
 }
 
 var showResult = false
+var historyResult: String?
 
 class ViewController: UIViewController {
     
@@ -95,7 +96,8 @@ class ViewController: UIViewController {
         do {
             let result = try calculate()
             
-            label.text = numberFormatter.string(from: NSNumber(value: result))
+            historyResult = numberFormatter.string(from: NSNumber(value: result))
+            label.text = historyResult
         } catch {
             label.text = "Ошибка"
         }
@@ -107,7 +109,7 @@ class ViewController: UIViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let calculationsListVC = sb.instantiateViewController(identifier: "CalculationsListViewController")
         if let vc = calculationsListVC as? CalculationsListViewController {
-            vc.result = label.text
+            vc.result = historyResult == nil ? "NoData" : historyResult
         }
         
         navigationController?.pushViewController(calculationsListVC, animated: true)

@@ -293,10 +293,10 @@
             </objects>
             <point key="canvasLocation" x="1000.0000000000001" y="3.3482142857142856"/>
         </scene>
-        <!--История-->
+        <!--Прошляе вычисления-->
         <scene sceneID="935-hZ-eCo">
             <objects>
-                <viewController storyboardIdentifier="CalculationsListViewController" id="VjI-Dd-o2V" customClass="CalculationsListViewController" customModule="TinkoffCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculationsListViewController" title="Прошляе вычисления" id="VjI-Dd-o2V" customClass="CalculationsListViewController" customModule="TinkoffCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ahM-ar-af9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
